@@ -1,22 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/icon/favicon.png" type="image/x-icon">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-    <!--  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/icon/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" />
     <title>Todo App</title>
-
-    <!-- bootstrap js -->
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
-</head>
+  </head>
+  <body
+    class="d-flex justify-content-center align-items-center bg-primary vh-100"
+  >
+    <main class="bg-light p-3 rounded shadow-sm">
+      <h4 class="fw-light text-center mb-3 fs-3">Todo App</h4>
 
-<body>
+      <form id="todoForm" class="d-flex gap-1">
+        <input type="text" class="form-control" placeholder="Name" id="name" />
+
+        <input type="number" class="form-control" placeholder="Age" id="age" />
+
+        <button
+          type="submit"
+          id="submitBtn"
+          class="btn btn-sm btn-primary w-100"
+        >
+          Create
+        </button>
+      </form>
+
+      <div
+        class="my-3 overflow-auto border rounded p-2"
+        style="width: 500px; height: 400px"
+      >
+        <p id="emptyMsg" class="text-center text-danger fw-semibold mt-2">
+          No Todo Items
+        </p>
+
+        <ul id="todoList" class="list-group"></ul>
+      </div>
+    </main>
+
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
